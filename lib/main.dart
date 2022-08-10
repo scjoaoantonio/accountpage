@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:lms/routes.dart';
 import 'screens/login/login_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/register',
+      routes: routes,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: LoginScreen(),
     );
   }
 }
